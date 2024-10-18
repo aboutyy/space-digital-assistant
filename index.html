@@ -38,53 +38,49 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/header-fix.css">
   </head>
   <body>
     <!-- ====== Header Section ====== -->
-    <header id="top">
-      <div class="bg-color">
-        <div class="top section-padding">
-          <div class="container">
-            <div class="row">
-
-              <div class="col-sm-7 col-md-7">
-                <div class="content">
-                  <h1><strong>空间</strong> 数字人</h1>
-				  <h2>您线下空间的全能助理.</h2> 
-                  <div class="button" id="download-app1">
-                    <a href="#download" class="btn btn-default btn-lg custom-btn">了解更多</a>
-                  </div> <!-- end .button -->
-                </div> <!-- end .content -->
-              </div> <!-- end .top > .container> .row> .col-md-7 -->
-
-              <div class="col-sm-5 col-md-5">
-                <div class="photo-slide">
-                 <div id="carousel" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel" data-slide-to="1" class=""></li>
-                    <li data-target="#carousel" data-slide-to="2" class=""></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="item">
-                      <img src="images/phone.png" alt="">
-                    </div>
-                    <div class="item active left">
-                      <img src="images/digital human/scene2.png" alt="">
-                    </div>
-                    <div class="item next left">
-                      <img src="images/digital human/scene3.png" alt="">
-                    </div>
-                  </div> <!-- end .carousel-inner -->
-                </div> <!-- end #carousel -->
-                </div> <!-- end .photo-slide -->
-              </div> <!-- end .top > .container> .row> .col-md-5 -->
-
-            </div> <!-- end .top> .container> .row -->
-          </div> <!-- end .top> .container -->
-        </div> <!-- end .top -->
-      </div> <!-- end .bg-color -->
+    <header id="top" style="height: 100vh; min-height: 600px; display: flex; align-items: center; justify-content: center; background: url('images/bg.jpg') no-repeat center center; background-size: cover; position: relative;">
+      <div class="bg-overlay" style="background: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="row">
+          <div class="col-md-12 text-center" style="padding: 20px;">
+            <h1 style="font-size: 5em; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 50px; letter-spacing: 2px;">
+              <strong style="color: #0099FF;">空间</strong>数字人
+            </h1>
+            <div style="height: 60px; margin-bottom: 30px;">
+              <h2 id="tagline" style="font-size: 2.2em; color: #f0f0f0; font-weight: 300; letter-spacing: 1px; opacity: 0; transition: opacity 1s ease-in-out;">
+                您线下空间的全能助理
+              </h2>
+            </div>
+            <div style="height: 80px; margin-bottom: 40px;">
+              <p id="description" class="lead" style="font-size: 1.3em; color: #e0e0e0; max-width: 800px; margin: 0 auto; line-height: 1.6; opacity: 0; transition: opacity 1s ease-in-out;">
+                融合AR、AI和空间智能，为您提供个性化的交互体验
+              </p>
+            </div>
+            <a href="#aboutApp" class="btn btn-primary btn-lg" style="background-color: #0099FF; border: none; padding: 15px 30px; font-size: 1.1em; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
+              了解更多
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
+
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.getElementById('tagline').style.opacity = '1';
+        }, 500);
+        setTimeout(function() {
+          document.getElementById('description').style.opacity = '1';
+        }, 1500);
+      });
+    </script>
     <!-- ====== End Header Section ====== -->
     
 
@@ -125,49 +121,61 @@
     <!-- ====== End Menu Section ====== -->
 
     <!-- ====== aboutApp Section ====== -->
-    <section id="aboutApp">
-      <div class="aboutApp section-padding">
-        <div class="container">
-          <div class="row">
-            <!-- First Module -->
-            <div class="col-sm-4">
-              <div class="module">
-                <h2 class="module-title">定点定制讲解</h2>
-                <div class="module-image">
-                  <img src="images/digital human/about-speech.gif" alt="模块一GIF">
+    <section id="aboutApp" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header text-center">
+              <h1>关于产品</h1>
+              <p>探索我们产品的核心功能</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <i class="fa fa-map-marker"></i>
+                  <h3>定点定制讲解</h3>
                 </div>
-                <div class="module-decoration">
-                  <hr class="decoration-line">
+                <div class="card-back">
+                  <img src="images/digital human/about-speech.gif" alt="定点定制讲解演示">
+                  <p>根据用户位置，提供专业、个性化的解说。</p>
                 </div>
               </div>
             </div>
-            <!-- Second Module -->
-            <div class="col-sm-4">
-              <div class="module">
-                <h2 class="module-title">路径规划与引导</h2>
-                <div class="module-image">
-                  <img src="images/digital human/about-walk.gif" alt="模块二GIF">
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <i class="fa fa-route"></i>
+                  <h3>路径规划与引导</h3>
                 </div>
-                <div class="module-decoration">
-                  <hr class="decoration-line">
-                </div>
-              </div>
-            </div>
-            <!-- Third Module -->
-            <div class="col-sm-4">
-              <div class="module">
-                <h2 class="module-title">智能交互问答</h2>
-                <div class="module-image">
-                  <img src="images/digital human/about-interact.gif" alt="模块三GIF">
-                </div>
-                <div class="module-decoration">
-                  <hr class="decoration-line">
+                <div class="card-back">
+                  <img src="images/digital human/about-walk.gif" alt="路径规划与引导演示">
+                  <p>智能计算最优径，提供实时导航指引。</p>
                 </div>
               </div>
             </div>
-          </div> <!-- .row -->
-        </div> <!-- .container -->
-      </div> <!-- end .aboutApp -->
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <i class="fa fa-comments"></i>
+                  <h3>AI智能交互问答</h3>
+                </div>
+                <div class="card-back">
+                  <img src="images/digital human/about-interact.gif" alt="智能交互问答演示">
+                  <p>采用AIGC技术，通过问答，提供场馆信息。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- ====== End aboutApp Section ====== -->
 
@@ -175,90 +183,61 @@
     <section id="features">
       <div class="features section-padding dark-bg">
         <div class="container">
-
           <div class="header">
             <h1>产品特色</h1>
-            <p>空间数字人是一款完全自主的数字人产品，融合了最新的AR、数字人、大语言模型、室内定位、三维重建等技术，相关技术已申请多项专利.</p>
-            <div class="underline">
-            </div>
-          </div> <!-- end .container> .header -->
-<div class="row"> <!-- row -->
-                
-                <div class="col-md-5 text-right">  <!-- Left Content Col 6 -->
-                    <div class="media service"> <!-- Service #1 -->
-                        <div class="media-body">
-						 
-                            <h4 class="media-heading">智能交互</h4>
-                            <p>与个性化的真人或者动画角色直接使用语言交流，符合人类自然交流特性.</p>
-                        </div>
-                      <div class="media-right media-middle">
-                            <i class="fa fa-users"></i>
-                        </div>
-                    </div><!-- End Service #1 -->
+            <p>空间数字人是一款完全自主的数字人产品，融合了最新的AR、数字人、大语言模型、室内定位、三维重建等技术，相关技术已请多项专利.</p>
+            <div class="underline"></div>
+          </div>
 
-                    <div class="media service"> <!-- Service #2 -->
-                        <div class="media-body">
-						 
-                            <h4 class="media-heading">空间智能</h4>
-                            <p>融合3D数字人+LLM+AR视觉实时定位技术，实现高精度实时视觉定位和智能空间分析.</p>
-                        </div> 
-						<div class="media-right media-middle">
-                            <i class="fa fa-arrows"></i>
-                        </div>
-                    </div><!-- End Service #2 -->
-
-                    <div class="media service"> <!-- Service #3 -->
-                        <div class="media-body">
-						 
-                            <h4 class="media-heading">个性定制</h4>
-                            <p>可根据用户需求设计数字人，场景，应用功能等服务.</p>
-                        </div> 
-						<div class="media-right media-middle">
-                            <i class="fa fa-camera-retro"></i>
-                        </div>
-                    </div> <!-- End Service #3 -->
-                </div> <!-- End Left Content Col 6 -->
-  <div class="col-md-2">
-              <div class="featured-item-img">
-                <img src="images/phone.png" alt="">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="feature-item">
+                <i class="fa fa-comments-o"></i>
+                <h3>智能交互</h3>
+                <p>与个性化的人或者动画角色直接使用语言交流，符合人类自然交流特性.</p>
               </div>
             </div>
-                <div class="col-md-5"> <!-- Right Content Col 6 -->
-                    <div class="media service"> <!-- Service #4 -->
-						  <div class="media-left media-middle">
-                            <i class="fa fa-android"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">AR多元呈现</h4>
-                            <p>提供多样的三维模型、交互式视频和动画，实现实时空间融合，为用户带来沉浸式AR体验.</p>
-                        </div>
-						
-                    </div><!-- end Service #4 -->
-
-                    <div class="media service"> <!-- Service #5 -->
-                       
-						  <div class="media-left media-middle">
-                            <i class="fa fa-apple"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">智能导引</h4>
-                            <p>像线下真人一样指引用户到达指定位置.</p>
-                        </div> 
-                    </div> <!-- end Service #5 -->
-
-                    <div class="media service"> <!-- Service #6 -->
-                         <div class="media-left media-middle">
-                            <i class="fa fa-play"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">自主可控</h4>
-                            <p>软件完全自主研发，硬件与国内厂商合作，完全自主可控.</p>
-                        </div> 
-                    </div> <!-- end Service #6 -->
-                </div><!-- end Right Content Col 6 -->
-                
+            
+            <div class="col-md-4">
+              <div class="feature-item">
+                <i class="fa fa-cube"></i>
+                <h3>空间智能</h3>
+                <p>融合3D数字人+LLM+AR视觉实时定位技术，实现高精度实时视觉定位能空间分析.</p>
+              </div>
             </div>
-         
+            
+            <div class="col-md-4">
+              <div class="feature-item">
+                <i class="fa fa-cogs"></i>
+                <h3>定制</h3>
+                <p>可根据用户需求设计数字人，场景，应用功能等服务.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="feature-item">
+                <i class="fa fa-glasses"></i>
+                <h3>AR多元呈现</h3>
+                <p>提供多样的三维模型、交互式视频和动画，实现实时空间融合，为用户带来沉浸式AR体验.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="feature-item">
+                <i class="fa fa-map-marker"></i>
+                <h3>智能导引</h3>
+                <p>线下真人一样指引用户到达指定位置.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="feature-item">
+                <i class="fa fa-lock"></i>
+                <h3>自主可控</h3>
+                <p>软件完全自主研发，硬件与国内厂合作，完全自主可控.</p>
+              </div>
+            </div>
+          </div>
         </div> <!-- end .container -->
       </div> <!-- end .features -->
     </section>
@@ -272,29 +251,30 @@
 
           <div class="header">
             <h1>应用案例</h1>
-            <p>产品已开展多项案例研究，包括人工智能实验室展厅的导览，古陶博物馆的导游等.</p>
+            <p>产品已开展多项案例研究，包括人工智能实验室展厅的导览，古博物馆的导游等.</p>
             <div class="underline"></div>
           </div>
 
           <div class="owl-carousel owl-theme">
             <div class="item">
+              <a href="https://www.bilibili.com/video/BV1mn2dYfE31/?spm_id_from=333.1007.tianma.3-1-5.click" data-rel="prettyPhoto[iframes]"><img src="images/case1.png" alt="案例1" style="border: none; box-shadow: none;"></a>
+            </div>
+            <div class="item">
+              <a href="https://www.bilibili.com/video/BV1Ny411B7EK?spm_id_from=333.788.videopod.sections&vd_source=e9fc59cbe6bf7c08768deb384c0f6a94" data-rel="prettyPhoto[iframes]"><img src="images/case2.png" alt="案例2" style="border: none; box-shadow: none;"></a>
+            </div>
+            <div class="item">
+              <a href="https://www.bilibili.com/video/BV1Ny411B7EK?spm_id_from=333.788.videopod.sections&vd_source=e9fc59cbe6bf7c08768deb384c0f6a94" data-rel="prettyPhoto[iframes]"><img src="images/case3.png" alt="案例3" style="border: none; box-shadow: none;"></a>
+            </div>
+            <div class="item">
+              <a href="https://www.bilibili.com/video/BV1Ny411B7EK?spm_id_from=333.788.videopod.sections&vd_source=e9fc59cbe6bf7c08768deb384c0f6a94" data-rel="prettyPhoto[iframes]"><img src="images/case4.png" alt="案例4" style="border: none; box-shadow: none;"></a>
+            </div>
+            <!-- 保留原有的两个重复项 -->
+            <div class="item">
               <a href="images/case1.png" data-rel="prettyPhoto"><img src="images/case1.png" alt="item photo" style="border: none; box-shadow: none;"></a>
-            </div> <!-- end item -->
+            </div>
             <div class="item">
               <a href="images/case2.png" data-rel="prettyPhoto"><img src="images/case2.png" alt="item photo" style="border: none; box-shadow: none;"></a>
-            </div> <!-- end item -->
-            <div class="item">
-              <a href="images/case3.png" data-rel="prettyPhoto"><img src="images/case3.png" alt="item photo" style="border: none; box-shadow: none;"></a>
-            </div> <!-- end item -->
-            <div class="item">
-              <a href="images/case4.png" data-rel="prettyPhoto"><img src="images/case4.png" alt="item photo" style="border: none; box-shadow: none;"></a>
-            </div> <!-- end item -->
-            <div class="item">
-              <a href="images/case1.png" data-rel="prettyPhoto"><img src="images/case1.png" alt="item photo" style="border: none; box-shadow: none;"></a>
-            </div> <!-- end item -->
-            <div class="item">
-              <a href="images/case2.png" data-rel="prettyPhoto"><img src="images/case2.png" alt="item photo" style="border: none; box-shadow: none;"></a>
-            </div> <!-- end item -->
+            </div>
           </div> <!-- end owl carousel -->
 
         </div> <!-- .container -->
@@ -321,7 +301,7 @@
                       <img src="images/lifeifei.png" alt="">
                     </div> <!-- end .image -->
                     <div class="content">
-                      <p>空间智能教会计算机理解和操作三维世界，它将释放人工智能的全部潜力​.</p>
+                      <p>空间能教计算机理解和操作三维世界，它将释放人工智能的全部潜力​.</p>
                       <h4>李飞飞</h4>
                       <h5>人工智能专家</h5>
                     </div> <!-- end .content -->
@@ -332,7 +312,7 @@
                       <img src="images/Sundar Pichai.webp" alt="">
                     </div> <!-- end .image -->
                     <div class="content">
-                      <p>数字助理将成为未来技术的核心之一，帮助人们更智能地生活.</p>
+                      <p>数字助理将成为未来技术的心之一，帮助人们更智能地生活.</p>
                       <h4>Sundar Pichai</h4>
                       <h5>谷歌CEO</h5>
                     </div> <!-- end .content -->
@@ -366,7 +346,7 @@
 
           <div class="header">
             <h1>研发团队</h1>
-            <p>研发团队包括来自高校、科研院所、互联网企业的多元化人才.</p>
+            <p>研发团队括来自高校、科研院所、互联网企业的多元化才.</p>
             <div class="underline"></div>
           </div> <!-- end .container> .header -->
 
@@ -531,8 +511,8 @@
       <div class="subscribe section-padding">
         <div class="container">
           <div class="subscribe-header">
-            <h1>订阅产品更新</h1>
-            <p>产品应用更新，行业最新动态，最新应用案例等.</p>
+            <h1>阅品更新</h1>
+            <p>产品应用更新，行业最新态，最新应用案例等.</p>
             <form action="" class="form subscribe-form">
               <div class="form-group">
                 <div class="input-group">
@@ -546,15 +526,14 @@
             </form>
           </div>
           <div class="social">
-            <ul>
-              <li><a class="twitter" href=""><i class="fa fa-twitter"></i></a></li> 
-              <li><a class="facebook" href=""><i class="fa fa-facebook"></i></a></li> 
-              <li><a class="google-plus" href=""><i class="fa fa-google-plus"></i></a></li> 
-              <li><a class="youtube" href=""><i class="fa fa-youtube"></i></a></li> 
-              <li><a class="linkedin" href=""><i class="fa fa-linkedin"></i></a></li> 
-              <li><a class="pinterest" href=""><i class="fa fa-pinterest"></i></a></li> 
-              <li><a class="dribbble" href=""><i class="fa fa-dribbble"></i></a></li> 
-              <li><a class="flickr" href=""><i class="fa fa-flickr"></i></a></li>          
+            <ul class="social-icons">
+              <li><a class="twitter" href=""><i class="fab fa-twitter"></i></a></li> 
+              <li><a class="facebook" href=""><i class="fab fa-facebook-f"></i></a></li> 
+              <li><a class="youtube" href=""><i class="fab fa-youtube"></i></a></li> 
+              <li><a class="linkedin" href=""><i class="fab fa-linkedin-in"></i></a></li> 
+              <li><a class="instagram" href=""><i class="fab fa-instagram"></i></a></li> 
+              <li><a class="weibo" href=""><i class="fab fa-weibo"></i></a></li> 
+              <li><a class="tiktok" href=""><i class="fab fa-tiktok"></i></a></li>
             </ul>
           </div>
         </div>
@@ -579,7 +558,7 @@
 
               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                 <a href="" class="btn btn-default custom-btn download-btn">
-                  <i class="fa fa-mobile"></i>
+                  <i class="fab fa-apple"></i>
                   <div class="app-download">
                     <span>下载</span><strong>苹果应用商店</strong>
                   </div>
@@ -588,27 +567,28 @@
 
               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                 <a href="" class="btn btn-default custom-btn download-btn">
-                <img src="images/playstore.png" alt="">
-                <div class="app-download">
-                  <span>下载</span><strong>应用商店</strong>
-                </div></a>
+                  <i class="fab fa-google-play"></i>
+                  <div class="app-download">
+                    <span>下载</span><strong>谷歌应用商店</strong>
+                  </div>
+                </a>
               </div> <!-- end .download-area> .col-lg-3 (2) -->
 
               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                 <a href="" class="btn btn-default custom-btn download-btn">
-                <i class="fa fa-windows"></i>
-                <div class="app-download">
-                  <span>进入</span>微信
-                </div>
+                  <i class="fab fa-weixin"></i>
+                  <div class="app-download">
+                    <span>进入</span>微信小程序
+                  </div>
                 </a>
               </div> <!-- end .download-area> .col-lg-3 (3) -->
 
               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                 <a href="" class="btn btn-default custom-btn download-btn">
-                <img src="images/amazon.png" alt="">
-                <div class="app-download">
-                  <span>下载</span><strong>Meta应用商店</strong>
-                </div>
+                  <i class="fab fa-facebook"></i>
+                  <div class="app-download">
+                    <span>下载</span><strong>Meta应用商店</strong>
+                  </div>
                 </a>
               </div> <!-- end .download-area> .col-lg-3 (4) --> 
 
@@ -709,8 +689,36 @@
     <script>
       jQuery(document).ready(function($) {
         "use strict";
-        jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({social_tools:false});
+        
+        $("a[data-rel^='prettyPhoto']").on('click', function(e) {
+          e.preventDefault();
+          var videoUrl = $(this).attr('href');
+          console.log('Link clicked:', videoUrl);
+          
+          // 从URL中提取BV号
+          var bvMatch = videoUrl.match(/BV\w+/);
+          if (!bvMatch) {
+            console.error('无法从URL中提取BV号');
+            return;
+          }
+          var bvid = bvMatch[0];
+          
+          // 创建嵌入式播放器URL
+          var embedUrl = 'https://player.bilibili.com/player.html?bvid=' + bvid + '&page=1';
+          
+          // 创建 lightbox
+          var lightbox = $('<div id="video-lightbox" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"><iframe src="' + embedUrl + '" width="800" height="500" frameborder="0" allowfullscreen></iframe><button id="close-lightbox" style="position:absolute;top:-40px;right:-40px;background:none;border:none;color:white;font-size:30px;cursor:pointer;">×</button></div></div>');
+          
+          $('body').append(lightbox);
+          
+          $('#close-lightbox').on('click', function() {
+            $('#video-lightbox').remove();
+          });
+        });
       });
     </script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/header-fix.js"></script>
   </body>
 </html>

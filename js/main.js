@@ -1,4 +1,3 @@
-
 jQuery(window).bind('scroll', function (){
   if (jQuery(window).scrollTop() > 900){
     jQuery('#main-nav').addClass('navbar-fixed-top');
@@ -26,7 +25,6 @@ $(document).ready(function(){
   $('#download').parallax("50%", 0.4);
 })
 
-
 $(document).ready(function() {
       $(".owl-carousel").owlCarousel({
         autoPlay: 3000,
@@ -46,3 +44,42 @@ $(document).ready(function() {
           });
         });
 
+$(document).ready(function(){
+  // 添加平滑滚动到所有链接
+  $("a").on('click', function(event) {
+    // 确保 this.hash 有值后才能覆盖默认行为
+    if (this.hash !== "") {
+      // 防止默认的锚点点击行为
+      event.preventDefault();
+
+      // 存储 hash
+      var hash = this.hash;
+
+      // 使用 jQuery 的 animate() 方法添加平滑滚动效果
+      // 可选的 number (800) 指定滚动的毫秒数
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // 添加 hash (#) 到 URL，但不会造成页面跳转
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+$(document).ready(function() {
+  $('.feature-tabs nav ul li').click(function() {
+    var tab_id = $(this).attr('data-tab');
+
+    $('.feature-tabs nav ul li').removeClass('active');
+    $('.tab-pane').removeClass('active');
+
+    $(this).addClass('active');
+    $("#"+tab_id).addClass('active');
+  });
+
+  // 点击卡片时翻转
+  $('.card-inner').click(function() {
+    $(this).toggleClass('is-flipped');
+  });
+});
